@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial SIL2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Orbitron:wght@500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body>
+    <div class="app-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="logo" onclick="navigateTo('/')">
+                <i data-lucide="shield-check"></i>
+                <span>INFO SIS-SIL2</span>
+            </div>
+            <div class="nav-links">
+                <a href="#" onclick="navigateTo('/')">Inicio</a>
+            </div>
+        </nav>
+
+        <!-- Main Content Area -->
+        <main id="main-content">
+            <!-- Content will be injected here by script.js -->
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>&copy; 2024 Tutorial SIL2. Información basada en documentación de Seguridad Funcional - Creado por TON.
+            </p>
+        </footer>
+    </div>
+
+    <!-- Templates for different views -->
+
+    <!-- Home Template -->
+    <template id="template-home">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>TUTORIAL SOBRE <span class="gradient-text">SIL2</span></h1>
+                <p>Guía interactiva sobre Seguridad Funcional y Sistemas Instrumentados de Seguridad.</p>
+
+                <div class="search-container">
+                    <input type="text" id="main-search" placeholder="Escribe tu pregunta sobre SIL2..."
+                        autocomplete="off">
+                    <button id="search-btn" class="search-btn">
+                        <i data-lucide="arrow-right"></i>
+                    </button>
+                </div>
+                <div id="search-results" class="search-results hidden"></div>
+            </div>
+            </div>
+            <img src="images/hero.png" alt="Futuristic Safety Factory" class="hero-image">
+        </section>
+
+        <section class="grid-nav">
+            <h2>Explorar Contenido</h2>
+            <div class="card-grid" id="home-grid">
+                <!-- Cards injected via JS -->
+            </div>
+        </section>
+    </template>
+
+    <!-- Content Page Template -->
+    <template id="template-content">
+        <div class="content-layout">
+            <aside class="sidebar" id="sidebar-nav">
+                <!-- Sidebar links injected via JS -->
+            </aside>
+            <article class="content-article" id="article-view">
+                <h1 id="article-title"></h1>
+                <div id="article-body"></div>
+                <div class="article-nav">
+                    <button id="prev-btn" class="nav-btn">Anterior</button>
+                    <button id="next-btn" class="nav-btn">Siguiente</button>
+                </div>
+            </article>
+        </div>
+    </template>
+
+    <!-- Resumen Template -->
+    <template id="template-resumen">
+        <div class="resumen-container">
+            <h1>Resumen del Sitio</h1>
+            <div class="summary-card">
+                <p>Este sitio web es una plataforma interactiva diseñada para facilitar la consulta y aprendizaje sobre
+                    la <strong>Seguridad Funcional (SIL2)</strong> basada en estándares internacionales como IEC 61508.
+                </p>
+
+                <div class="stats-grid">
+                    <div class="stat-box">
+                        <span class="stat-number">9</span>
+                        <span class="stat-label">Módulos</span>
+                    </div>
+                    <div class="stat-box">
+                        <span class="stat-number">SIL2</span>
+                        <span class="stat-label">Enfoque</span>
+                    </div>
+                </div>
+
+                <h3>Contenido Principal</h3>
+                <ul class="summary-list">
+                    <li>Definición y cálculo de riesgos.</li>
+                    <li>Normativas y estándares (IEC/EN 61508).</li>
+                    <li>Ciclo de vida de seguridad.</li>
+                    <li>Conceptos clave: PFD, PFH, SFF, HFT.</li>
+                </ul>
+            </div>
+        </div>
+    </template>
+
+    <script type="module" src="data.js"></script>
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
